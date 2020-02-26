@@ -1,0 +1,11 @@
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/security/JsonWebToken.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/service/lot/LotService.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/service/utils/BaseResult.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/controller/lot/LotCtrl.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/exception/UserNotFoundException.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/repository/LotRepository.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/service/utils/validation/ValidationService.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/configuration/WebSecurityConfiguration.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/SpringBootVuejsApplication.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/domain/entity/Lot.java
+/Users/leo/Documents/Dev/Java/workspaces/Eclipse/CESI-Worskspace-1/springboot-vuetify/backend/src/main/java/springboot/domain/entity/LotFile.java
