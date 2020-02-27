@@ -24,6 +24,11 @@ Ce projet est découpé en 2 modules :
 - GET : "/get/lots" : Retourne tous les lots contenu dans la base de données
 - POST : "/post/lot" : Prend en paramètre un fichier JSON (Format décris plus bas), insère en base de donnée tout les lots contenus dans ce fichier.
 
+### Base de donnée
+Nom de bdd : clay_db
+Username : root
+Pas de mot de passe
+
 ### Format du fichier JSON
 ```json
     {
