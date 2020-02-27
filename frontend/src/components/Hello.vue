@@ -327,6 +327,11 @@ export default {
       let result = this.lots.filter(lot =>
         lot.date.includes(this.selectedDate)
       );
+      this.lotFilt = result.filter(x => {
+        return Object.keys(this.filtersLot).every(y => {
+          return this.filtersLot[y].includes(x[y]);
+        });
+      });
       return result;
     }
   },

@@ -1,47 +1,69 @@
-## First App run
-### Inside the root directory do a:
+# Lancer le projet
+## Etapes a suivre lors du tout premier lancement
+### Dans le repertoire racine:
 ```
 mvn clean install
-```
-
-### Inside the root directory do a:
-```
 mvn --projects backend spring-boot:run
 ```
-## Faster feedback with webpack-dev-server
-The webpack-dev-server, which will update and build every change through all the parts of the JavaScript build-chain, is pre-configured in Vue.js out-of-the-box! So the only thing needed to get fast feedback development-cycle is to cd into frontend and run:
+
+## Pour developper plus rapidement l'interface
+Le serveur webpack-dev contient un système de hot-reload qui permet de recharger la page a chaque sauvegarde de fichier dans le projet, ce qui permet un cycle de devellopement plus rapide.
 ```
-npm run serve
+cd frontend
+yarn serve
 ```
-##
 
-Start page
+# Fonctionnement du projet
+## Fonctionnement général
+Ce projet est découpé en 2 modules :
+- Un module API backend en Java avec Springboot, qui permet de communiquer avec la base de donnée.
+- Un module interface frontend en Javascript avec Vuetify, qui communique avec le serveur backend
 
-![hello](screenshots/hello.png)
+## API Springboot
+### Routes
+- GET : "/get/lots" : Retourne tous les lots contenu dans la base de données
+- POST : "/post/lot" : Prend en paramètre un fichier JSON (Format décris plus bas), insère en base de donnée tout les lots contenus dans ce fichier.
 
-Sign in
+### Format du fichier JSON
+```json
+    {
+        "date":"YYYY-MM-DD",
+        "lots": [
+            {
+                "pressure": int,
+                "offset": int,
+                "component": String,
+                "layout": int,
+                "colorbound": String,
+                "quality": String,
+                "performance": String,
+                "result": int,
+                "timecode": int
+            }
+        ]
+    }
+```
 
-![login](screenshots/login.png)
+### Modèle
+#### Lot
+```
+    int pressure
+    int offset
+    String component
+    int layout
+    String colorbound
+    String quality
+    String performance
+    int result
+    int timecode
+```
+## Interface Vuetify
+Un projet nodejs standard, fonctionnant via Vuejs
 
-Sign up
+## Workflow recommandé
+Lancer dans un premier temps l'api via <code>mvn --projects backend spring-boot:run</code> dans le repertoire racine, et ensuite lancer l'interface en dev via <code>yarn dev</code> dans le répertoire frontend.
+Le serveur de dev est accessible sur [http://localhost:8081]
 
-![registration](screenshots/registration.png)
-
-Registration in progress
-
-![registration](screenshots/registration-inprogress.png)
-
-Registration success
-
-![registration](screenshots/registration-success.png)
-
-Protected page
-
-![registration](screenshots/app.png)
-
-Password update
-
-![registration](screenshots/password-update.png)
-
-
-# ProjetJavaCESI
+## Mise en production
+Dans un premier temps, il faut lancer <code>yarn build</code> dans le répertoire frontend, et ensuite <code>mvn package</code> dans le répertoire racine.
+Le contenu du build du dossier frontend sera transféré au dossier backend, donc le module backend aura tout ce dont il a besoin pour lancer le site en prod.
